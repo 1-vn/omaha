@@ -203,8 +203,8 @@ HRESULT DataDumperGoopdate::GetDllDir(bool is_machine, CString* dll_path) {
 }
 
 void DataDumperGoopdate::DumpGoogleUpdateIniFile(const DumpLog& dump_log) {
-  DumpHeader header(dump_log, _T("BraveUpdate.ini File Contents"));
-  DumpFileContents(dump_log, _T("c:\\braveupdate.ini"), 0);
+  DumpHeader header(dump_log, _T("OneVNUpdate.ini File Contents"));
+  DumpFileContents(dump_log, _T("c:\\onevnupdate.ini"), 0);
 }
 
 void DataDumperGoopdate::DumpHostsFile(const DumpLog& dump_log) {
@@ -339,7 +339,7 @@ void DataDumperGoopdate::DumpEventLog(const DumpLog& dump_log) {
 }
 
 void DataDumperGoopdate::DumpGoogleUpdateProcessInfo(const DumpLog& dump_log) {
-  DumpHeader header(dump_log, _T("BraveUpdate.exe Process Info"));
+  DumpHeader header(dump_log, _T("OneVNUpdate.exe Process Info"));
 
   EnableDebugPrivilege();
 
@@ -363,7 +363,7 @@ void DataDumperGoopdate::DumpGoogleUpdateProcessInfo(const DumpLog& dump_log) {
     CString exe_file_name = process_entry32.szExeFile;
     exe_file_name.MakeLower();
 
-    if (exe_file_name.Find(_T("braveupdate.exe")) >= 0) {
+    if (exe_file_name.Find(_T("onevnupdate.exe")) >= 0) {
       if (first) {
         first = false;
       } else {

@@ -1,7 +1,7 @@
 # Omaha
 
 ## How to build ##
-See https://github.com/brave/brave-browser/wiki/Brave-omaha
+See https://github.com/onevn/onevn-browser/wiki/OneVN-omaha
 
 ## This is not an official Google product. ##
 
