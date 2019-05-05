@@ -120,7 +120,7 @@ void InstallManager::InstallApp(App* app,  const CString& dir) {
 
   HANDLE primary_token(app->app_bundle()->primary_token());
 
-  omaha::OneVNSendStatsPing(_T("installer-run"), app->app_guid_string(),
+  omaha::OnevnSendStatsPing(_T("installer-run"), app->app_guid_string(),
                             app->referral_id(), next_version->version());
 
   HRESULT hr = InstallApp(is_machine_,

@@ -18,16 +18,16 @@ action("build_omaha_installer") {
   sources = [ "$root_out_dir/$onevn_installer_exe" ]
 
   _install_switch = ""
-  _tag_app_name = "OneVN-Release"
+  _tag_app_name = "Onevn-Release"
   if (onevn_channel == "beta") {
     _install_switch = "--chrome-beta"
-    _tag_app_name = "OneVN-Browser-Beta"
+    _tag_app_name = "Onevn-Browser-Beta"
   } else if (onevn_channel == "dev") {
     _install_switch = "--chrome-dev"
-    _tag_app_name = "OneVN-Browser-Dev"
+    _tag_app_name = "Onevn-Browser-Dev"
   } else if (onevn_channel == "nightly") {
     _install_switch = "--chrome-sxs"
-    _tag_app_name = "OneVN-Browser-Nightly"
+    _tag_app_name = "Onevn-Browser-Nightly"
   } else {
     assert(onevn_channel == "", "Unknown channel name")
   }

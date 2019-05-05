@@ -7,7 +7,7 @@
 
 namespace omaha {
 
-HRESULT OneVNSendStatsPing(const CString& event, const CString& app_guid,
+HRESULT OnevnSendStatsPing(const CString& event, const CString& app_guid,
                            const CString& referral_code,
                            const CString& version);
 

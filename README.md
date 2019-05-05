@@ -1,7 +1,7 @@
 # Omaha
 
 ## How to build ##
-See https://github.com/onevn/onevn-browser/wiki/OneVN-omaha
+See https://github.com/onevn/onevn-browser/wiki/Onevn-omaha
 
 ## This is not an official Google product. ##
 

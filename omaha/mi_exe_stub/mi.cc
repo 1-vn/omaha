@@ -699,7 +699,7 @@ HRESULT StorePathToRegForPromoCode(LPSTR lpCmdLine) {
   HKEY key;
   DWORD dw;
   if (RegCreateKeyEx(HKEY_CURRENT_USER,
-                     _T("Software\\OneVNSoftware\\Promo"),
+                     _T("Software\\OnevnSoftware\\Promo"),
                      0,
                      NULL,
                      REG_OPTION_NON_VOLATILE,
@@ -756,7 +756,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int) {
   const CString referral_code = omaha::GetReferralCodeFromModuleFileName();
   if (CString(lpCmdLine).IsEmpty()) {
     const CString app_guid = omaha::ReadAppGuidFromTag(hInstance);
-    hr = omaha::OneVNSendStatsPing(_T("startup"), app_guid, referral_code,
+    hr = omaha::OnevnSendStatsPing(_T("startup"), app_guid, referral_code,
                                    _T(""));
   }
 

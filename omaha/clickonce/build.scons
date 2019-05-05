@@ -92,6 +92,6 @@ env.Depends(
         ],
     dependency = [
         '%s/%s' % (clickonce_deploy_bin_dir, clickonce_binary),
-        '%s/OneVNUpdateSetup.exe' % (clickonce_deploy_bin_dir),
+        '%s/OnevnUpdateSetup.exe' % (clickonce_deploy_bin_dir),
         ]
 )

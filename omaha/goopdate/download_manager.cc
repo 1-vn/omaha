@@ -277,7 +277,7 @@ HRESULT DownloadManager::DownloadApp(App* app) {
   }
 
   if (SUCCEEDED(hr)) {
-    omaha::OneVNSendStatsPing(_T("download-complete"), app->app_guid_string(),
+    omaha::OnevnSendStatsPing(_T("download-complete"), app->app_guid_string(),
                               app->referral_id(),
                               app_version->app()->next_version()->version());
     app->DownloadComplete();

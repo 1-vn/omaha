@@ -17,10 +17,10 @@
 
 """Constants and utilities related to Omaha and tools versions"""
 
-_ONECLICK_PLUGIN_NAME = 'npOneVNOneClick'
-_UPDATE_PLUGIN_NAME = 'npOneVNUpdate'
+_ONECLICK_PLUGIN_NAME = 'npOnevnOneClick'
+_UPDATE_PLUGIN_NAME = 'npOnevnUpdate'
 _BHO_NAME = 'GoopdateBho'
-_CRASH_HANDLER_NAME = 'OneVNCrashHandler'
+_CRASH_HANDLER_NAME = 'OnevnCrashHandler'
 
 # List of languages that are fully supported in the current build.
 _OMAHA_LANGUAGES = [
@@ -124,16 +124,16 @@ def _GetMetainstallerPayloadFilenames(prefix,
   # files (googleupdate.exe, goopdateres_*.dll, etc.) are hardcoded all over
   # the place, and require a ton of point fixes to customize.
   payload_files = [
-      'OneVNUpdate.exe',
+      'OnevnUpdate.exe',
       '%s.exe' % _CRASH_HANDLER_NAME,
       '%sgoopdate.dll' % (prefix),
       plugin_dll_name,
       bho_dll_name,
-      'OneVNUpdateHelper.msi',
-      'OneVNUpdateBroker.exe',
-      'OneVNUpdateOnDemand.exe',
-      'OneVNUpdateComRegisterShell64.exe',
-      'OneVNUpdateWebPlugin.exe',
+      'OnevnUpdateHelper.msi',
+      'OnevnUpdateBroker.exe',
+      'OnevnUpdateOnDemand.exe',
+      'OnevnUpdateComRegisterShell64.exe',
+      'OnevnUpdateWebPlugin.exe',
       '%spsmachine.dll' % (prefix),
       '%spsmachine_64.dll' % (prefix),
       '%spsuser.dll' % (prefix),
@@ -147,9 +147,9 @@ def _GetMetainstallerPayloadFilenames(prefix,
     payload_files.remove(bho_dll_name)
   elif _IsSupportedOmaha2Version(omaha_version):
     payload_files.remove(plugin_dll_name)
-    payload_files.remove('OneVNUpdateBroker.exe')
-    payload_files.remove('OneVNUpdateOnDemand.exe')
-    payload_files.remove('OneVNUpdateComRegisterShell64.exe')
+    payload_files.remove('OnevnUpdateBroker.exe')
+    payload_files.remove('OnevnUpdateOnDemand.exe')
+    payload_files.remove('OnevnUpdateComRegisterShell64.exe')
     payload_files.remove('psmachine.dll')
     payload_files.remove('psmachine_64.dll')
     payload_files.remove('psuser.dll')
@@ -169,7 +169,7 @@ def _GetMetainstallerPayloadFilenames(prefix,
       omaha_version[1] >= 3 and
       (omaha_version[2] >= 32)):
     # added with 1.3.32.1 and later
-    payload_files.append('OneVNUpdateCore.exe')
+    payload_files.append('OnevnUpdateCore.exe')
 
   for language in languages:
     payload_files += ['%sgoopdateres_%s.dll' % (prefix, language)]

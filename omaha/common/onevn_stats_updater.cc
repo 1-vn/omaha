@@ -27,7 +27,7 @@ CString GetChannelName(const CString& app_guid) {
     return _T("");
 }
 
-CString GetOneVNVersion(const CString& version) {
+CString GetOnevnVersion(const CString& version) {
   // Strip first segment from version number.
   int pos = version.Find(_T('.'));
   if (pos != -1)
@@ -37,7 +37,7 @@ CString GetOneVNVersion(const CString& version) {
 
 }  // namespace
 
-HRESULT OneVNSendStatsPing(const CString& event, const CString& app_guid,
+HRESULT OnevnSendStatsPing(const CString& event, const CString& app_guid,
                            const CString& referral_code,
                            const CString& version) {
   // Retrieve the update server name.
@@ -66,7 +66,7 @@ HRESULT OneVNSendStatsPing(const CString& event, const CString& app_guid,
       system_info.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_INTEL
           ? _T("winia32-bc")
           : _T("winx64-bc"),
-      GetOneVNVersion(version), channel_name, referral_code, event);
+      GetOnevnVersion(version), channel_name, referral_code, event);
 
   omaha::NetworkConfig* network_config = NULL;
   omaha::NetworkConfigManager& network_manager =

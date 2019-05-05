@@ -203,7 +203,7 @@ HRESULT DataDumperGoopdate::GetDllDir(bool is_machine, CString* dll_path) {
 }
 
 void DataDumperGoopdate::DumpGoogleUpdateIniFile(const DumpLog& dump_log) {
-  DumpHeader header(dump_log, _T("OneVNUpdate.ini File Contents"));
+  DumpHeader header(dump_log, _T("OnevnUpdate.ini File Contents"));
   DumpFileContents(dump_log, _T("c:\\onevnupdate.ini"), 0);
 }
 
@@ -339,7 +339,7 @@ void DataDumperGoopdate::DumpEventLog(const DumpLog& dump_log) {
 }
 
 void DataDumperGoopdate::DumpGoogleUpdateProcessInfo(const DumpLog& dump_log) {
-  DumpHeader header(dump_log, _T("OneVNUpdate.exe Process Info"));
+  DumpHeader header(dump_log, _T("OnevnUpdate.exe Process Info"));
 
   EnableDebugPrivilege();
 

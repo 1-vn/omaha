@@ -49,7 +49,7 @@ def Copy_Untagged_Installers(args, omaha_dir, debug):
 
   shutil.copyfile(source_untagged_installer, target_untagged_installer)
 
-  source_untagged_stub_installer = os.path.join(omaha_out_dir, 'staging', 'OneVNUpdateSetup.exe')
+  source_untagged_stub_installer = os.path.join(omaha_out_dir, 'staging', 'OnevnUpdateSetup.exe')
   target_untagged_stub_installer_file = args.stub_untagged_exe[0]
   if debug:
     target_untagged_stub_installer_file = 'Debug' + target_untagged_stub_installer_file
@@ -143,7 +143,7 @@ def Tagging(args, omaha_dir, debug):
   command = [apply_tag_exe, source_silent_installer, target_silent_installer, silent_tag]
   sp.check_call(command, stderr=sp.STDOUT)
 
-  source_stub_installer = os.path.join(omaha_out_dir, 'staging', 'OneVNUpdateSetup.exe')
+  source_stub_installer = os.path.join(omaha_out_dir, 'staging', 'OnevnUpdateSetup.exe')
   target_stub_installer_file = args.stub_installer_exe[0]
   if debug:
     target_stub_installer_file = 'Debug' + target_stub_installer_file
@@ -151,7 +151,7 @@ def Tagging(args, omaha_dir, debug):
   command = [apply_tag_exe, source_stub_installer, target_stub_installer, tag]
   sp.check_call(command, stderr=sp.STDOUT)
 
-  source_silent_stub_installer = os.path.join(omaha_out_dir, 'staging', 'OneVNUpdateSetup.exe')
+  source_silent_stub_installer = os.path.join(omaha_out_dir, 'staging', 'OnevnUpdateSetup.exe')
   target_silent_stub_installer_file = args.stub_silent_exe[0]
   if debug:
     target_silent_stub_installer_file = 'Debug' + target_silent_stub_installer_file
